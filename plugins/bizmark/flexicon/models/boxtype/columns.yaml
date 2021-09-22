@@ -1,0 +1,33 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    sort_order:
+        label: Сортировка
+
+    id:
+        label: ID
+        searchable: true
+
+    name:
+        label: Название
+        relation: box_name
+        select: name
+        searchable: true
+
+    code:
+        label: Артикул коробки
+        searchable: true
+
+    coefficient:
+        label: Коэффициент
+        searchable: true
+
+    updated_at:
+        label: Обновлено
+        type: timesince
+
+    created_at:
+        label: Создано
+        type: date

@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Название картона
+
+# Model Form Field configuration
+form: $/bizmark/flexicon/models/papername/fields.yaml
+
+# Model Class name
+modelClass: BizMark\Flexicon\Models\PaperName
+
+# Default redirect location
+defaultRedirect: bizmark/flexicon/papernames
+
+# Create page
+create:
+    title: Создание названия картона
+    redirect: bizmark/flexicon/papernames/update/:id
+    redirectClose: bizmark/flexicon/papernames
+
+# Update page
+update:
+    title: Редактирование названия картона
+    redirect: bizmark/flexicon/papernames
+    redirectClose: bizmark/flexicon/papernames
+
+# Preview page
+preview:
+    title: Preview Paper Name

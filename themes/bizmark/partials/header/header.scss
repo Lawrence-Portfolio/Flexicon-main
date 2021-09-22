@@ -1,0 +1,123 @@
+header {
+   border-top: 3px solid #7B4A2A;
+   padding: 44px 0 30px;
+   background-color: #fff;
+   .header-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+   .logo {
+      margin-top: -14px;
+   }
+   .navbar {
+      padding: 0;
+   }
+   .nav {
+      li {
+         margin-right: 30px;
+         &:last-child {
+            margin-right: 0;
+         }
+      }
+      a {
+         font-weight: 500;
+      }
+   }
+   // .nav-menu.show {
+   //    right: 0;
+   // }
+   .mail-icon {
+      font-size: 14px;
+   }
+   .phone-icon {
+      font-size: 12px;
+   }
+   .contacts {
+      display: flex;
+      a {
+         display: flex;
+         align-items: center;
+         margin-right: 30px;
+         &:last-child {
+            margin-right: 0;
+         }
+         i {
+            margin-right: 10px;
+         }
+      }
+   }
+   .burger {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      padding: 0;
+      background-color: transparent;
+      border: none;
+      font-size: 24px;
+      outline: none;
+      z-index: 50;
+   }
+}
+
+@media(min-width: 768px) {
+   header .burger {
+      display: none;
+   }
+}
+
+@media(max-width: 991px) {
+   header {
+      font-size: 14px;
+      .contacts {
+         flex-direction: column;
+      }
+   }
+}
+@media(max-width: 767px) {
+   header {
+      padding: 20px 0;
+      .logo {
+         margin-top: 0;
+         margin-bottom: 10px;
+      }
+      .navbar {
+         margin-bottom: 10px;
+      }
+      .nav {
+         flex-direction: column;
+         text-align: center;
+         li {
+            margin-right: 0;
+            margin-bottom: 5px;
+            &:last-child {
+               margin-bottom: 0;
+            }
+         }
+      }
+      .header-wrap {
+         flex-direction: column;
+      }
+      .contacts {
+         align-items: center;
+         a {
+            margin-right: 0;
+            margin-bottom: 5px;
+            &:last-child {
+               margin-bottom: 0;
+            }
+         }
+      }
+      .burger {
+         position: absolute;
+         top: 15px;
+         right: 15px;
+      }
+   }
+}
+
+@media(max-width: 575px) {
+}

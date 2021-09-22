@@ -1,0 +1,105 @@
+.order-form {
+    .form-footer {
+        margin-top: 2rem;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    .files-wrap {
+        display: flex;
+    }
+    .file-block {
+        margin-right: 40px;
+    }
+    .submit {
+        padding: 15px 75px;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+    .responsiv-uploader-fileupload.style-file-multi {
+        
+        .upload-button  {
+            padding: 0;
+            border: none;
+            &:focus {
+                box-shadow: none;
+            }
+            i {
+                color: #3B7A17;
+                margin-left: 5px;
+            }
+        }
+        .upload-object {
+            .meta {
+                margin-right: 0;
+                .upload-remove-button {
+                top: 0;
+                right: 6px;
+                line-height: 1;
+                padding: 0;
+            }
+            }
+            .info {
+                h4 {
+                    max-width: 200px;
+                }
+                p.size {
+                    // width: auto;
+                    // right: 20px;
+                    display: none!important;
+                }
+            }
+        }
+    }
+}
+@media(max-width: 1199px) {
+    .order-form {
+        .form-control {
+            max-width: 220px;
+        }
+        .file-block {
+            margin-right: 20px;
+            width: 50%;
+        }
+        .submit {
+            padding: 15px 45px;
+        }
+        .responsiv-uploader-fileupload.style-file-multi .upload-button {
+            text-align: left;
+            font-size: 14px;
+        }
+    }
+}
+
+@media(max-width: 991px) {
+    .order-form {
+        .form-footer,
+        .files-wrap {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .form-footer {
+            margin-top: 30px;
+        }
+        .submit {
+            width: 100%;
+        }
+        .file-block {
+            margin-right: 0;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+        .file-btn {
+            text-align: left;
+        }
+        .form-control {
+            max-width: 100%;
+            flex: 1 1;
+        }
+        .form-label {
+            min-width: 190px;
+        }
+    }
+}
+
+

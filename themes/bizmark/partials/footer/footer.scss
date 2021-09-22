@@ -1,0 +1,95 @@
+footer {
+    .footer {
+        padding: 74px 0 60px;
+        background-color: $second_color;
+        .footer-logo {
+            margin-top: -14px;
+        }
+        .footer-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .contacts-wrap {
+            flex: 1 1;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+        }
+        .contact-icon {
+            margin-right: 10px;
+        }
+        .email-icon,
+        .address-icon {
+            font-size: 14px;
+        }
+        .phone-icon {
+            font-size: 12px;
+        }
+        .social-link {
+            font-size: 20px;
+            margin-right: 10px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    .project-by {
+        padding: 50px 0 40px;
+        display: flex;
+        justify-content: center;
+        .studio {
+            text-align: center;
+            &:hover {
+                .studio-logo path {
+                    fill: $main_color;
+                }
+                .studio-name {
+                    color: $main_color;
+                }
+            }
+        }
+        .studio-logo {
+            margin-bottom: 20px;
+            path {
+                transition: all .2s ease-in-out;
+            }
+        }
+        .studio-name {
+            transition: all .2s ease-in-out;
+            font-family: 'Roboto', sans-serif;
+            color: #c4c4c4;
+        }
+    }
+}
+
+@media(max-width: 991px) {
+    footer .footer .contacts-wrap {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media(max-width: 575px) {
+    footer {
+        .footer {
+            padding: 50px 0;
+            .footer-wrap {
+                flex-direction: column;
+            }
+            .footer-logo {
+                margin-top: 0;
+                margin-bottom: 10px;
+            }
+            .contacts-wrap {
+                margin-bottom: 10px;
+            }
+            .contact-item {
+                margin-bottom: 5px;
+            }
+        }
+    }
+}

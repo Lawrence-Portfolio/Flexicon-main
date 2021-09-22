@@ -1,0 +1,17 @@
+# ===================================
+#  Reorder Behavior Config
+# ===================================
+
+# Reorder Title
+title: Reorder
+
+# Attribute name
+nameFrom: code
+
+# Model Class name
+modelClass: BizMark\Flexicon\Models\BoxType
+
+# Toolbar widget configuration
+toolbar:
+    # Partial for toolbar buttons
+    buttons: reorder_toolbar

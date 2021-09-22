@@ -1,0 +1,11 @@
+{% set modal_id = modal_id|default('orderModal') %}
+<div class="order-modal modal fade" tabindex="-1" role="dialog" id="{{ modal_id }}" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div id="formWrapper">
+                {% partial 'form/order' form_type=form_type form_id=modal_id %}
+            </div>
+            <button class="btn close-modal" data-dismiss="modal" aria-label="Close"><i class="fal fa-times"></i></button>
+        </div>
+    </div>
+</div>

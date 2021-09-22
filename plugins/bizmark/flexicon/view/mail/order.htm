@@ -1,0 +1,53 @@
+subject = "Новая заявка на сайте"
+==
+
+Заявка №{{ number }}.
+Создана {{ created_at }}
+
+Организация: {{ organization }}
+ФИО: {{ full_name }}
+Email: {{ email }}
+Телефон: {{ phone }}
+Комментарий: {{ comment }}
+Стоимость: {{ total_price }}
+
+Корзина
+
+{% for position in cart %}
+Коробка: {{ position.name }}
+Картон: {{ position.paper_name }}
+Печать: {{ position.print_type }}
+Длина коробки: {{ position.box_size_length }}
+Ширина коробки: {{ position.box_size_width }}
+Высота коробки: {{ position.box_size_height }}
+Тираж: {{ position.quantity }}
+Стоимость: {{ position.price }}
+
+{% endfor %}
+==
+
+<h1>Заявка №{{ number }}.</h1>
+<p>Создана {{ created_at }}</p>
+
+<ul>
+    <li>Организация: {{ organization }}</li>
+    <li>ФИО: {{ full_name }}</li>
+    <li>Email: {{ email }}</li>
+    <li>Телефон: {{ phone }}</li>
+    <li>Комментарий: {{ comment }}</li>
+    <li>Стоимость: {{ total_price }}</li>
+</ul>
+
+<p>Корзина:</p>
+{% for position in cart %}
+    <ul>
+        <li>Коробка: {{ position.name }}</li>
+        <li>Картон: {{ position.paper_name }}</li>
+        <li>Печать: {{ position.print_type }}</li>
+        <li>Длина коробки: {{ position.box_size_length }}</li>
+        <li>Ширина коробки: {{ position.box_size_width }}</li>
+        <li>Высота коробки: {{ position.box_size_height }}</li>
+        <li>Тираж: {{ position.quantity }}</li>
+        <li>Стоимость: {{ position.price }}</li>
+    </ul>
+{% endfor %}

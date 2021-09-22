@@ -1,0 +1,9 @@
+<img class="img-fluid success-message-logo" src="{{ 'assets/images/svg/logo.svg'|theme }}" alt="get box">
+<div class="success-message-title">ВАШЕ Сообщение отправлено!</div>
+{% if order is not empty and this.page.id != 'info-contacts' %}
+    <div class="success-message-order">
+        <div>Заказ № <span class="order-num">{{ order.number }}</span></div>
+        <div>Дата: <span class="order-date">{{ order.created_at.format('Y-m-d H:i') }}</span></div>
+    </div>
+{% endif %}
+<div class="success-message-description">{{ message }}</div>

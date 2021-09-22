@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Заказ
+
+# Model Form Field configuration
+form: $/bizmark/flexicon/models/order/fields.yaml
+
+# Model Class name
+modelClass: BizMark\Flexicon\Models\Order
+
+# Default redirect location
+defaultRedirect: bizmark/flexicon/orders
+
+# Create page
+create:
+    title: Создать заказ
+    redirect: bizmark/flexicon/orders/update/:id
+    redirectClose: bizmark/flexicon/orders
+
+# Update page
+update:
+    title: Редактировать заказ
+    redirect: bizmark/flexicon/orders
+    redirectClose: bizmark/flexicon/orders
+
+# Preview page
+preview:
+    title: Preview Order

@@ -1,0 +1,28 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    paper_name:
+        label: Название картона
+        type: relation
+        placeholder: Выберите название картона
+        span: left
+
+    code:
+        label: Марка картона
+        span: left
+
+    price:
+        label: Стоимость за м2
+        type: number
+        span: left
+
+    color:
+        label: Цвет
+        span: left
+
+    image:
+        label: Изображение
+        span: left
+        type: fileupload

@@ -1,0 +1,45 @@
+title = "Главная страница"
+url = "/"
+layout = "default"
+is_hidden = 0
+==
+function onStart() {
+    $this['page_style'] = mix('css/index.css', 'themes/bizmark/assets');
+    $this['page_script'] = mix('js/index.js', 'themes/bizmark/assets');
+}
+==
+{% put page_style %}
+    <link rel="stylesheet" href="{{ page_style }}">
+{% endput %}
+{% put page_script %}
+    <script src="{{ page_script }}"></script>
+{% endput %}
+<section class="hero">
+    <div class="container">
+        <div class="hero-wrap">
+            <div class="row">
+                <div class="col-xl-7 col-lg-6">
+                    <h1 class="h1">
+                        ЦИФРОВОЕ ПРОИЗВОДСТВО<br>
+                        КОРОБОК ПО ТРЕБОВАНИЮ
+                    </h1>
+                    <ul>
+                        <li>Изготовление 48 часов</li>
+                        <li>Тираж от 10 штук</li>
+                        <li>Любая конфигурация и размеры по запросу</li>
+                        <li>Эко-печать водными красками</li>
+                    </ul>
+                </div>
+                <div class="col-xl-5 col-lg-6 hero-box">
+                    <img class="img-fluid" src="{{ 'assets/images/hero-box.png'|theme }}" alt="get box">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="calculate">
+    <div id="app"></div>
+</section>
+
+{% partial 'modal/order' form_type='Калькулятор' modal_id="orderModal" %}
+{% partial 'modal/success' message = 'Спасибо за Ваш заказ! Мы свяжемся с вами в ближайшее время!' %}

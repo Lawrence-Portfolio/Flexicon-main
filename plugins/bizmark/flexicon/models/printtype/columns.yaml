@@ -1,0 +1,28 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+
+    name:
+        label: Название
+        searchable: true
+
+    price:
+        label: Стоимость печати
+        searchable: true
+
+    coefficient:
+        label: Коэффициент
+        searchable: true
+
+    updated_at:
+        label: Обновлено
+        type: timesince
+
+    created_at:
+        label: Создано
+        type: date

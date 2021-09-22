@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Print Type
+
+# Model Form Field configuration
+form: $/bizmark/flexicon/models/printtype/fields.yaml
+
+# Model Class name
+modelClass: BizMark\Flexicon\Models\PrintType
+
+# Default redirect location
+defaultRedirect: bizmark/flexicon/printtypes
+
+# Create page
+create:
+    title: Create Print Type
+    redirect: bizmark/flexicon/printtypes/update/:id
+    redirectClose: bizmark/flexicon/printtypes
+
+# Update page
+update:
+    title: Edit Print Type
+    redirect: bizmark/flexicon/printtypes
+    redirectClose: bizmark/flexicon/printtypes
+
+# Preview page
+preview:
+    title: Preview Print Type

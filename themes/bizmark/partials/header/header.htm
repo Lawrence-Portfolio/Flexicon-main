@@ -1,0 +1,31 @@
+<header>
+   <div class="container">
+      <div class="header-wrap">
+         <a class="logo" href="/">
+            <img class="img-fluid" src="{{ 'assets/images/svg/logo.svg'|theme }}" alt="get box">
+         </a>
+         <nav class="navbar navbar-expand-md">
+            <div class="collapse navbar-collapse" id="nav-menu">
+               <ul class="nav">
+                  <li><a href="/">Главная</a></li>
+                  <li><a href="{{ 'info/about-us'|page }}">О компании</a></li>
+                  <li><a href="{{ 'info/contacts'|page }}">Контакты</a></li>
+               </ul>
+            </div>
+         </nav>
+         <div class="contacts">
+            <a href="mailto:{{ this.theme.contact_email }}">
+               <i class="fal fa-envelope mail-icon"></i>
+               {{ this.theme.contact_email }}
+            </a>
+            <a href="tel:{{ this.theme.contact_phone }}">
+               <i class="fas fa-phone-alt phone-icon"></i>
+               {{ this.theme.contact_phone }}
+            </a>
+         </div>
+         <button class="burger" type="button" data-toggle="collapse" data-target="#nav-menu" aria-expanded="false" aria-controls="nav-menu">
+            <i class="fas fa-bars"></i>
+         </button>
+      </div>
+   </div>
+</header>

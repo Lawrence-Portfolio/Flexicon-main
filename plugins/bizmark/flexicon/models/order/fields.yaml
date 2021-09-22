@@ -1,0 +1,100 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    number@preveiw:
+        label: ID
+        disabled: true
+        span: full
+
+    organization:
+        label: Организация
+        searchable: true
+        span: left
+
+    cart:
+        label: Корзина
+        span: right
+        type: repeater
+        prompt: Добавить товар в корзину
+        form:
+            fields:
+                name:
+                    label: Коробка
+                    span: storm
+                    cssClass: col-md-6 col-xs-12
+
+                paper_name:
+                    label: Картон
+                    span: storm
+                    cssClass: col-md-6 col-xs-12
+
+                print_type:
+                    label: Печать
+                    span: storm
+                    cssClass: col-md-6 col-xs-12
+
+                lamination_type:
+                    label: Ламинация
+                    span: storm
+                    cssClass: col-md-6 col-xs-12
+
+                box_size_length:
+                    label: Длина коробки
+                    span: storm
+                    cssClass: col-md-4 col-xs-12
+
+                box_size_width:
+                    label: Ширина коробки
+                    span: storm
+                    cssClass: col-md-4 col-xs-12
+
+                box_size_height:
+                    label: Высота коробки
+                    span: storm
+                    cssClass: col-md-4 col-xs-12
+
+                quantity:
+                    label: Тираж
+                    span: storm
+                    cssClass: col-md-6 col-xs-12
+
+                price:
+                    label: Стоимость
+                    span: storm
+                    cssClass: col-md-6 col-xs-12
+
+    full_name:
+        label: ФИО
+        searchable: true
+        span: left
+
+    email:
+        label: Email
+        span: left
+
+    phone:
+        label: Телефон
+        span: left
+
+    comment:
+        label: Комментарий
+        type: textarea
+        span: left
+
+    total_price:
+        label: Стоимость
+        span: left
+
+    requisites:
+        label: Файл с реквизитами
+        type: fileupload
+        mode: file
+        span: left
+
+    designs:
+        label: Файл с дизайном
+        type: fileupload
+        mode: file
+        span: left

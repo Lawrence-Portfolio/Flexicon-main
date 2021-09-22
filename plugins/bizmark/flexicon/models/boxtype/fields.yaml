@@ -1,0 +1,25 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    box_name:
+        label: Название коробки
+        type: relation
+        placeholder: Выберите название коробки
+        span: left
+
+    code:
+        label: ID коробки
+        commentAbove: 'Пример: "FEFCO: 0200", "FEFCO: 0201", "FEFCO: 0206" и т.д.'
+        span: left
+
+    coefficient:
+        label: Коэффициент
+        type: number
+        span: left
+
+    image:
+        label: Изображение
+        span: left
+        type: fileupload

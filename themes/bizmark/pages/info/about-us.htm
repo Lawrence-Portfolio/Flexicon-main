@@ -1,0 +1,96 @@
+title = "О компании"
+url = "/about-us"
+layout = "default"
+is_hidden = 0
+==
+function onStart() {
+    $this['page_style'] = mix('css/about-us.css', 'themes/bizmark/assets');
+    $this['page_script'] = mix('js/about-us.js', 'themes/bizmark/assets');
+}
+==
+{% put main_classes %}
+    class="inner-page"
+{% endput %}
+
+{% put page_script %}
+    <script src="{{ page_script }}"></script>
+{% endput %}
+
+{% put page_style %}
+    <!-- <link rel="stylesheet" href="{{ 'assets/libs/css/dropzone-basic.css'|theme }}"> -->
+    <link rel="stylesheet" href="{{ page_style }}">
+{% endput %}
+
+<section class="about-us">
+    <div class="container">
+        <h1 class="h1">{{ this.page.title }}</h1>
+        <div class="about-us-info">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="description">
+                        {{ this.theme.about_content_1|raw }}
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img class="img-fluid" width="535px" height="400px" src="{{ 'assets/images/about-image-1.jpg'|theme }}" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="about-us-info">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="description">
+                        {{ this.theme.about_content_2|raw }}
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img class="img-fluid" width="535px" height="411px" src="{{ 'assets/images/about-image-2.jpg'|theme }}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="additional-services">
+    <div class="container">
+        <h2 class="h1">Дополнительные услуги</h2>
+        <div class="row">
+            <div class="col-xl-3 col-lg-4 col-md-6 services-col">
+                <div class="services-wrap">
+                    <picture>
+                        <img class="img-fluid" src="{{ 'assets/images/svg/dev-draw-pack.svg'|theme }}" alt="Разработка чертежа упаковки">
+                    </picture>
+                    <div class="bottom-card">
+                        <div class="services-name">Разработка<br> чертежа упаковки</div>
+                        <button class="c-btn services-order" data-toggle="modal" data-target="#chertezh">Заказать</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 services-col">
+                <div class="services-wrap">
+                    <picture>
+                        <img class="img-fluid" src="{{ 'assets/images/svg/dew-design-pack.svg'|theme }}" alt="Разработка дизайна упаковки">
+                    </picture>
+                    <div class="bottom-card">
+                        <div class="services-name">Разработка<br> дизайна упаковки</div>
+                        <button class="c-btn services-order" data-toggle="modal" data-target="#designing">Заказать</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 services-col">
+                <div class="services-wrap">
+                    <picture>
+                        <img class="img-fluid dev-prot-icon" src="{{ 'assets/images/dev-prot-pack.png'|theme }}" alt="Изготовление прототипа упаковки">
+                    </picture>
+                    <div class="bottom-card">
+                        <div class="services-name">Изготовление прототипа<br> упаковки из картона </div>
+                        <button class="c-btn services-order" data-toggle="modal" data-target="#prototype">Заказать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% partial 'modal/order' modal_id='chertezh' form_type='Разработка чертежа упаковки' %}
+{% partial 'modal/order' modal_id='designing' form_type='Разработка дизайна упаковки' %}
+{% partial 'modal/order' modal_id='prototype' form_type='Изготовление прототипа' %}
+{% partial 'modal/success' message = 'Спасибо за Ваш заказ! Мы свяжемся с вами в ближайшее время!' %}

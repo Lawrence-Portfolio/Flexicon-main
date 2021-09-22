@@ -1,0 +1,49 @@
+name: "Шаблон"
+description: "Шаблон"
+author: "Biz-Mark"
+homepage: "https://biz-mark.ru"
+code: "bizmark"
+form:
+    tabs:
+        fields:
+            contact_phone:
+                tab: Контакты
+                label: Контактный телефон
+                span: left
+
+            contact_email:
+                tab: Контакты
+                label: Контактный email
+                span: left
+
+            contact_address:
+                tab: Контакты
+                label: Контактный адрес
+                span: left
+
+            social_facebook:
+                tab: Социальные сети
+                label: Ссылка на страницу в Facebook
+                span: left
+
+            social_twitter:
+                tab: Социальные сети
+                label: Ссылка на страницу в Twitter
+                span: left
+
+            social_instagram:
+                tab: Социальные сети
+                label: Ссылка на страницу в Instagram
+                span: left
+
+            about_content_1:
+                tab: О компании
+                label: Текст 1
+                type: richeditor
+                span: left
+
+            about_content_2:
+                tab: О компании
+                label: Текст 2
+                type: richeditor
+                span: left

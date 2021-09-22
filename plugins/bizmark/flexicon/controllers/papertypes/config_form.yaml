@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Paper Type
+
+# Model Form Field configuration
+form: $/bizmark/flexicon/models/papertype/fields.yaml
+
+# Model Class name
+modelClass: BizMark\Flexicon\Models\PaperType
+
+# Default redirect location
+defaultRedirect: bizmark/flexicon/papertypes
+
+# Create page
+create:
+    title: Create Paper Type
+    redirect: bizmark/flexicon/papertypes/update/:id
+    redirectClose: bizmark/flexicon/papertypes
+
+# Update page
+update:
+    title: Edit Paper Type
+    redirect: bizmark/flexicon/papertypes
+    redirectClose: bizmark/flexicon/papertypes
+
+# Preview page
+preview:
+    title: Preview Paper Type

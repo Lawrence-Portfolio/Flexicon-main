@@ -1,0 +1,58 @@
+description = "Динамический шаблон"
+
+[SeoToolbox]
+
+[MakeOrder]
+
+[fileUploader requisitesUploader]
+placeholderText = "Прикрепить реквизиты компании <i class=\"fas fa-upload\"></i>"
+maxSize = 5
+fileTypes = "*"
+deferredBinding = 1
+
+[fileUploader designUploader]
+placeholderText = "Прикрепить файл дизайна <i class=\"fas fa-upload\"></i>"
+maxSize = 5
+fileTypes = ".jpg, .pdf, .ai, .cdr, .eps, .psd, .tiff, .ps, .doc, .docx, .xml, .zip"
+deferredBinding = 1
+==
+function onStart() {
+    $this['vendor_style'] = mix('css/vendor.css', 'themes/bizmark/assets');
+    $this['layout_style'] = mix('css/common.css', 'themes/bizmark/assets');
+    $this['layout_script'] = mix('js/common.js', 'themes/bizmark/assets');
+}
+function onInit() {
+    $this->requisitesUploader->bindModel('requisites', new \BizMark\Flexicon\Models\Order);
+    $this->designUploader->bindModel('designs', new \BizMark\Flexicon\Models\Order);
+}
+==
+<!doctype html>
+<html lang="ru">
+<head>
+    {{ SeoToolbox.getHeadBegin()|raw }}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="noindex, nofollow" />
+    {% placeholder seo_tags default %}
+        {% component 'SeoToolbox' %}
+    {% endplaceholder %}
+    <link rel="stylesheet" href="{{ vendor_style }}">
+    <link rel="stylesheet" href="{{ layout_style }}">
+    {% placeholder page_style %}
+    {% styles %}
+    {{ SeoToolbox.getHeadEnd()|raw }}
+</head>
+<body>
+    {{ SeoToolbox.getBodyBegin()|raw }}
+    {% partial 'header/header' %}
+    <main {% placeholder main_classes %}>
+        {% page %}
+    </main>
+    {% partial 'footer/footer' %}
+    <script src="{{ layout_script }}"></script>
+    {% placeholder page_script %}
+    {% framework extras %}
+    {% scripts %}
+    {{ SeoToolbox.getBodyEnd()|raw }}
+</body>
+</html>

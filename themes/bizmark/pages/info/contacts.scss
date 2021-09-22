@@ -1,0 +1,87 @@
+@import '../../partials/modal/modal.scss';
+@import '../../partials/modal/success.scss';
+
+.contacts-page {
+    padding-bottom: 50px;
+    .contacts-wrap {
+        padding: 40px 0;
+        .contact-item {
+            margin-bottom: 40px;
+            .contact-title {
+                display: inline-block;
+                font-weight: 700;
+                margin-bottom: 20px;
+            }
+            .contact-description {
+                display: block;
+                margin-bottom: 20px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    
+    // .contacts-item {
+    //     margin-bottom: 30px;
+    //     &:last-child {
+    //         margin-bottom: 0;
+    //     }
+    // }
+}
+
+.feedback-form {
+    background-color: #FCFCFC;
+    padding: 40px 60px;
+    .form-group {
+        &:nth-last-child(2) {
+            margin-bottom: 40px;
+        }
+    }
+    .btn-wrap {
+        text-align: right;
+    }
+    .submit {
+        font-weight: 500;
+        padding: 15px 40px;
+        text-transform: uppercase;
+    }
+}
+.our-on-map {
+    .map {
+        width: 100%;
+    }
+}
+
+#yaMap {
+    height: 500px;
+    .ymaps-2-1-78-map-copyrights-promo {
+        display: none;
+    }
+}
+
+@media(max-width: 1199px) {
+    .feedback-form {
+        padding: 30px;
+    }
+}
+
+@media(max-width: 991px) {
+    .contacts-page .contacts-wrap {
+        margin-top: 0;
+        margin-bottom: 40px;
+    }
+}
+
+@media(max-width: 575px) {
+    #yaMap {
+        height: 300px;
+    }
+    .feedback-form {
+        padding: 30px 15px;
+        margin: 0 -15px;
+        .submit {
+            width: 100%;
+        }
+    }
+}

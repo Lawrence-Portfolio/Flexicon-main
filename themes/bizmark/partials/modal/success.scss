@@ -1,0 +1,35 @@
+.success-modal {
+    font-size: 24px;
+    text-align: center;
+    .modal-dialog {
+        max-width: 715px;
+    }
+    .success-wrap {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 552px;
+    }
+    .success-message-logo {
+        width: 170px;
+        margin-bottom: 40px;
+    }
+    .success-message-title {
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
+    .success-message-order {
+        margin-bottom: 40px;
+    }
+}
+
+@media(max-width: 767px) {
+    .success-modal {
+        font-size: 18px;
+        .modal-content {
+            min-height: 350px;
+        }
+    } 
+}

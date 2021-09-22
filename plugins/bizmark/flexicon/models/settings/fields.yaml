@@ -1,0 +1,81 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    margin:
+        label: Коэффициент "маржа"
+        type: number
+        span: auto
+
+    email:
+        label: Почта для получения заказов
+        type: email
+        span: auto
+    
+    laminar_margin:
+        label: Коэффициент ламинации
+        type: number
+        span: auto
+tabs:
+    fields:
+        cost_prepress:
+            tab: Затраты
+            label: Затраты на препресс
+            type: number
+            span: left
+
+        cost_fee:
+            tab: Затраты
+            label: НДС
+            comment: "Указывать в виде дробного числа. Например: 20% = 1.2, 18% = 1.18"
+            type: number
+            span: right
+
+        cost_other:
+            tab: Затраты
+            label: Прочие затраты
+            type: number
+            span: left
+
+        cost_cutting:
+            tab: Стоимость
+            label: Стоимость резки за погонный метр
+            type: number
+            span: right
+
+        cost_pack_10_50:
+            tab: Стоимость
+            label: Коэффициент за партию в 10-50 штук
+            type: number
+            span: left
+
+        cost_pack_51_100:
+            tab: Стоимость
+            label: Коэффициент за партию в 51-100 штук
+            type: number
+            span: left
+
+        cost_pack_101_200:
+            tab: Стоимость
+            label: Коэффициент за партию в 101-200 штук
+            type: number
+            span: left
+
+        cost_pack_201_300:
+            tab: Стоимость
+            label: Коэффициент за партию в 201-300 штук
+            type: number
+            span: left
+
+        cost_pack_301_500:
+            tab: Стоимость
+            label: Коэффициент за партию в 301-500 штук
+            type: number
+            span: left
+
+        cost_pack_501_more:
+            tab: Стоимость
+            label: Коэффициент за партию более 501 штуки
+            type: number
+            span: left

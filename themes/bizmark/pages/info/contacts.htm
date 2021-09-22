@@ -1,0 +1,101 @@
+title = "Контакты"
+url = "/contacts"
+layout = "default"
+is_hidden = 0
+==
+<?php
+function onStart() {
+    $this['page_style'] = mix('css/contacts.css', 'themes/bizmark/assets');
+    $this['page_script'] = mix('js/contacts.js', 'themes/bizmark/assets');
+
+}
+?>
+==
+{% put main_classes %}
+    class="inner-page"
+{% endput %}
+
+{% put page_script %}
+    <script type="text/javascript">
+        let mapAddress = '{{ this.theme.contact_address }}'
+    </script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=33951983-7243-49db-8da0-1a0ceb66b58c&lang=ru_RU" type="text/javascript"></script>
+    <script src="{{ page_script }}"></script>
+{% endput %}
+
+{% put page_style %}
+    <link rel="stylesheet" href="{{ page_style }}">
+{% endput %}
+<section class="contacts-page">
+    <div class="container">
+        <h1 class="h1">Контакты</h1>
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="contacts-wrap">
+                    <div class="contact-item">
+                        <span class="contact-title">Адрес офиса</span>
+                        <span class="contact-description">Россия, г. Москва, ул. Расковой, д.34 стр.14</span>
+                        <span class="class="contact-description"">Тел:<a href="tel:">+7 499 130-67-97</a></span>
+                        <span  class="contact-description">E-mail:<a href="mailto:">customer@get-box.ru</a></span>
+                        
+                        
+                        <!-- <span class="contact-description">{{ this.theme.contact_address }}</span> -->
+                        <!-- <a href="tel:{{ this.theme.contact_phone }}" class="contact-description">Тел: {{ this.theme.contact_phone }}</a> -->
+                        <!-- <a href="mailto:{{ this.theme.contact_email }}" class="contact-description">E-mail: {{ this.theme.contact_email }}</a> -->
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-title">Адрес производства и склада</span>
+                        <span class="contact-description">Россия, г. Москва, 2-й Лихачевский переулок, д.7 Проходная завода МЗТО</span>
+                    </div>
+                    <!-- <div class="contacts-item">Наш Адрес</div>
+                    <div class="contacts-item">Россия, {{ this.theme.contact_address }}</div>
+                    <div class="contacts-item">Тел: <a href="tel:{{ this.theme.contact_phone }}">{{ this.theme.contact_phone }}</a></div>
+                    <div class="contacts-item">E-mail: <a href="mailto:{{ this.theme.contact_email }}">{{ this.theme.contact_email }}</a></div> -->
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <form class="feedback-form" id="feedbackForm">
+                    <input type="hidden" name="type" value="Контакты">
+                    <div class="form-group">
+                        <div class="form-label">Организация: <span class="required">*</span></div>
+                        <input class="form-control" type="text" name="organization" placeholder="Введите название организации" required>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-label">ФИО: <span class="required">*</span></div>
+                        <input class="form-control" type="text" name="full_name" placeholder="Введите ФИО" required>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-label">E-mail: <span class="required">*</span></div>
+                        <input class="form-control" type="text" name="email" placeholder="Введите email" required>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-label">Телефон: <span class="required">*</span></div>
+                        <input class="form-control phone-mask" name="phone" type="text" placeholder="Введите номер телефона" required>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-label">Ваше сообщение:</div>
+                        <textarea class="form-control" rows="3" name="comment" placeholder="Введите текст сообщения"></textarea>
+                    </div>
+                    <div class="custom-control custom-checkbox form-group">
+                        <input type="checkbox" class="custom-control-input" id="checkbox-{{ checkbox_id }}" required>
+                        <label class="custom-control-label" for="checkbox-{{ checkbox_id }}">Я даю согласие на обработку моих персональных данных</label>
+                    </div>
+                    <div class="btn-wrap">
+                        <button class="c-btn submit" type="submit">Отправить сообщение</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="our-on-map">
+    <div class="container">
+        <h2 class="h1">Схема проезда на склад для самовывоза</h2>
+    </div>
+    <picture>
+        <img class="map" src="{{ 'assets/images/map.jpg'|theme }}" alt="Схема проезда на склад для самовывоза">
+    </picture>
+    {# <div id="yaMap"></div> #}
+</section>
+
+{% partial 'modal/success' message = 'Мы свяжемся с вами в ближайшее время!' %}

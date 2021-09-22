@@ -1,0 +1,13 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: Название картона
+        span: left
+
+    image:
+        label: Изображение
+        span: left
+        type: fileupload

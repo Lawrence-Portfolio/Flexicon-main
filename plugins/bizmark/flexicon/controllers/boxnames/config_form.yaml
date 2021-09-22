@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Название коробки
+
+# Model Form Field configuration
+form: $/bizmark/flexicon/models/boxname/fields.yaml
+
+# Model Class name
+modelClass: BizMark\Flexicon\Models\BoxName
+
+# Default redirect location
+defaultRedirect: bizmark/flexicon/boxnames
+
+# Create page
+create:
+    title: Создание название коробки
+    redirect: bizmark/flexicon/boxnames/update/:id
+    redirectClose: bizmark/flexicon/boxnames
+
+# Update page
+update:
+    title: Редактировать название коробки
+    redirect: bizmark/flexicon/boxnames
+    redirectClose: bizmark/flexicon/boxnames
+
+# Preview page
+preview:
+    title: Preview Box Name

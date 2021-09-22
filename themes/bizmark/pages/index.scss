@@ -1,0 +1,59 @@
+@import "../build/scss/variables";
+@import '../partials/modal/modal.scss';
+@import '../partials/modal/order.scss';
+@import '../partials/modal/success.scss';
+
+.hero {
+   background-color: #fff;
+   background-image: url(../../assets/images/svg/hero-bg.svg);
+   background-position: center;
+   padding: 50px 0;
+   .h1 {
+      margin: 40px 0;
+      line-height: 1.5;
+      font-weight: 600;
+   }
+   ul {
+      li {
+         position: relative;
+         padding-left: 15px;
+         font-size: 24px;
+         font-weight: 500;
+         color: #7B4A2A;
+         &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 17px;
+            width: 4px;
+            height: 4px;
+            background-color: #7B4A2A;
+            border-radius: 50%;
+         }
+      }
+   }
+}
+.calculate {
+   background-color: #fcfcfc;
+   padding-bottom: 60px;
+}
+
+@media(max-width: 1199px) {
+   .hero ul li {
+      font-size: 18px;
+      &::before {
+         top: 12px;
+      }
+   }
+   .calculate {
+      padding-bottom: 30px;
+   }
+}
+
+@media(max-width: 991px) {
+   .hero {
+      .hero-box {
+         display: none;
+      }
+   }
+}

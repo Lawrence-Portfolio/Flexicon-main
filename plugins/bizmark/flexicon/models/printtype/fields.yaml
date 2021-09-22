@@ -1,0 +1,18 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: Название
+        span: left
+
+    price:
+        label: Стоимость печати
+        type: number
+        span: left
+
+    coefficient:
+        label: Коэффициент
+        type: number
+        span: left

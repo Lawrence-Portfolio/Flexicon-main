@@ -1,0 +1,37 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    sort_order:
+        label: Сортировка
+        
+    id:
+        label: ID
+        searchable: true
+
+    name:
+        label: Название
+        relation: paper_name
+        select: name
+        searchable: true
+
+    code:
+        label: Артикул коробки
+        searchable: true
+
+    price:
+        label: Стоимость за м2
+        searchable: true
+
+    color:
+        label: Цвет
+        searchable: true
+
+    updated_at:
+        label: Обновлено
+        type: timesince
+
+    created_at:
+        label: Создано
+        type: date

@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Тип коробки
+
+# Model Form Field configuration
+form: $/bizmark/flexicon/models/boxtype/fields.yaml
+
+# Model Class name
+modelClass: BizMark\Flexicon\Models\BoxType
+
+# Default redirect location
+defaultRedirect: bizmark/flexicon/boxtypes
+
+# Create page
+create:
+    title: Создание типа коробки
+    redirect: bizmark/flexicon/boxtypes/update/:id
+    redirectClose: bizmark/flexicon/boxtypes
+
+# Update page
+update:
+    title: Редактирование типа коробки
+    redirect: bizmark/flexicon/boxtypes
+    redirectClose: bizmark/flexicon/boxtypes
+
+# Preview page
+preview:
+    title: Preview Box Type
